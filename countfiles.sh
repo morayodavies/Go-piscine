@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A -a * --format=single-column| wc -l
+ls -R --format=single-column| wc -l
