@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -t -p --format=commas 
+ls -t -p --format=commas | sed 's/ //g' 
