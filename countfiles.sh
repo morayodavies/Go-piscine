@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A * --format=single-column
+ls -A * --format=single-column| sort -r
