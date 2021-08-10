@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -R --format=commas| wc -w
+find -type f | wc -w
