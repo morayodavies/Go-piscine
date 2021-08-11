@@ -4,22 +4,22 @@ import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
 	divisor := 1000000000000000000
-	res := 0
+	digit := 0
+	i := 10
 	if n < 0 {
 		z01.PrintRune('-')
 		n = n * -1
 	}
 	for divisor >= 1 {
 		if n >= divisor {
-			res = (n / divisor) + 48
-			z01.PrintRune(rune(res))
+			digit = (n / divisor) + 48
+			z01.PrintRune(rune(digit))
 			n = n - ((n / divisor) * divisor)
-			if n < divisor/10 {
+			for n < divisor/i {
 				z01.PrintRune('0')
+				i *= i
 			}
-		}
-		if n%divisor == 0 && divisor > 1 {
-			z01.PrintRune('0')
+			i = 10
 		}
 		divisor /= 10
 	}
