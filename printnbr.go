@@ -3,25 +3,19 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
+	divisor := 100000000000
 	res := 0
-	remainder := 0
 	if n < 0 {
 		z01.PrintRune('-')
 		n = n * -1
 	}
-	if n >= 100 {
-		z01.PrintRune('1')
-		n -= 100
-		remainder = n % 10
+	for divisor > 1 {
+		if n >= divisor {
+			res = (n / divisor) + 48
+			z01.PrintRune(rune(res))
+			n = n - ((n / divisor) * divisor)
+		}
+		divisor /= 10
 	}
-	if n >= 10 {
-		res = (n/10 + 48)
-		remainder = n % 10
-		z01.PrintRune(rune(res))
-		n = remainder
-	}
-	if n >= 0 {
-		remainder += 48
-		z01.PrintRune(rune(remainder))
-	}
+	z01.PrintRune(rune(n + 48))
 }
