@@ -3,7 +3,7 @@ package main
 import "github.com/01-edu/z01"
 
 func main() {
-	var i rune = 122
+	i := 'z'
 
 	for i >= 97 {
 		z01.PrintRune(i)
