@@ -26,5 +26,4 @@ func PrintNbr(n int) {
 		remainder += 48
 		z01.PrintRune(rune(remainder))
 	}
-
 }
