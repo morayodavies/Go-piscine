@@ -16,6 +16,9 @@ func PrintNbr(n int) {
 			n = n * -1
 		}
 	}
+	if n == 0 {
+		z01.PrintRune('0')
+	}
 	for divisor >= 1 {
 		if n >= divisor {
 			digit = (n / divisor) + 48
