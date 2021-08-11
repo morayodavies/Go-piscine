@@ -3,10 +3,8 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
-
 	res := 0
 	remainder := 0
-
 	if n < 0 {
 		z01.PrintRune('-')
 		n = n * -1
