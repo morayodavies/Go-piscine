@@ -14,7 +14,7 @@ func PrintNbr(n int) {
 			res = (n / divisor) + 48
 			z01.PrintRune(rune(res))
 			n = n - ((n / divisor) * divisor)
-			if n < divisor/10 {
+			if n < divisor/10 && n > 0 {
 				z01.PrintRune('0')
 			}
 		}
