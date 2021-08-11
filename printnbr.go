@@ -3,7 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
-	divisor := 100000000000
+	divisor := 1000000000000000000
 	res := 0
 	if n < 0 {
 		z01.PrintRune('-')
