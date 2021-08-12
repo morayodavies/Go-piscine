@@ -4,18 +4,18 @@ func Atoi(s string) int {
 	returnvalue := true
 	wordlength := 0
 	word := []rune(s)
+	sign := 1
+	if word[0] == 45 {
+		sign = -1
+	}
+	if word[0] == 43 || word[0] == 45 {
+		word[0] = '0'
+	}
 	for index := range word {
 		wordlength = index
 	}
 	i := 10
 	n := 0
-	firstletter := word[0]
-	sign := 1
-	if firstletter == 45 {
-		sign = -1
-	} else {
-		sign = 1
-	}
 	lastletter := rune(0)
 	for index := range word {
 		if index > 0 {
@@ -27,7 +27,7 @@ func Atoi(s string) int {
 			lastletter = word[wordlength]
 			n = int(word[wordlength]) - 48
 		}
-		if (lastletter > 57 || lastletter < 48) && index > 0 {
+		if lastletter > 57 || lastletter < 48 {
 			returnvalue = false
 		}
 	}
