@@ -1,10 +1,10 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
 	word := []rune(s)
 	for _, letter := range word {
-		fmt.Printf("%v", string(letter))
+		z01.PrintRune(letter)
 	}
 }
