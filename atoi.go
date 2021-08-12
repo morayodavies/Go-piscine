@@ -3,6 +3,9 @@ package piscine
 func Atoi(s string) int {
 	returnvalue := true
 	wordlength := 0
+	if s == "" {
+		s = "x"
+	}
 	word := []rune(s)
 	sign := 1
 	if word[0] == 45 {
