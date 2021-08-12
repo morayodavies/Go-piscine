@@ -27,7 +27,7 @@ func Atoi(s string) int {
 			lastletter = word[wordlength]
 			n = int(word[wordlength]) - 48
 		}
-		if lastletter > 57 || lastletter < 48 {
+		if (lastletter > 57 || lastletter < 48) && index > 0 {
 			returnvalue = false
 		}
 	}
