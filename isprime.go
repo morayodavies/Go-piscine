@@ -15,15 +15,25 @@ func checkprimes(nb int, s []int) bool {
 		return true
 	}
 }
+func Sqroot(nb int) int {
+	sqroot := 0
+	for i := 1; i <= nb; i++ {
+		if i*i == nb {
+			sqroot = i
+		}
+	}
+	return sqroot
+}
 
 func IsPrime(nb int) bool {
 	s := []int{2, 3, 5, 7, 11, 13, 17, 19, 23}
-	if nb > 200000 || nb <= 1 {
+	sqrtnb := Sqroot(nb)
+	if nb > 2000000000000 || nb <= 1 {
 		return false
-	} else if nb <= s[len(s)-1]*s[len(s)-1] {
+	} else if s[len(s)-1] >= sqrtnb {
 		return checkprimes(nb, s)
 	} else {
-		for i := s[len(s)-1] + 1; (i < nb) && i < s[len(s)-1]*s[len(s)-1]; i++ {
+		for i := s[len(s)-1] + 1; (i < sqrtnb) && i < 3037000500; i++ {
 			if checkprimes(i, s) {
 				s = append(s, i)
 			}
