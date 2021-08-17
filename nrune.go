@@ -3,12 +3,14 @@ package piscine
 func NRune(s string, n int) rune {
 	w := []rune(s)
 	length := 0
-	for i := range w {
-		length = i + 1
+	if s != "" {
+		for i := range w {
+			length = i
+		}
 	}
-	if n > length {
+	if n-1 > length || n < 0 {
 		return 0
 	} else {
-		return w[n]
+		return w[n-1]
 	}
 }
