@@ -3,13 +3,13 @@ package piscine
 func checkprimes(nb int, s []int) bool {
 	result := 0
 	for _, n := range s {
-		if nb%n == 0 {
+		if nb%n == 0 && nb != n {
 			result += 1
 		} else {
 			result += 0
 		}
 	}
-	if result > 0 && nb != 2 {
+	if result > 0 {
 		return false
 	} else {
 		return true
