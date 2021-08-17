@@ -1,6 +1,7 @@
 package piscine
 
 func NRune(s string, n int) rune {
+	position := n - 1
 	w := []rune(s)
 	length := 0
 	if s != "" {
@@ -8,9 +9,9 @@ func NRune(s string, n int) rune {
 			length = i
 		}
 	}
-	if n-1 > length || n < 0 {
+	if position > length || n <= 0 {
 		return 0
 	} else {
-		return w[n-1]
+		return w[position]
 	}
 }
