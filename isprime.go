@@ -9,7 +9,7 @@ func checkprimes(nb int, s []int) bool {
 			result += 0
 		}
 	}
-	if result > 0 {
+	if result > 0 && nb != 2 {
 		return false
 	} else {
 		return true
