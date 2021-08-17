@@ -19,8 +19,9 @@ func checkprimes(nb int, s []int) bool {
 func Sqroot(nb int) int {
 	sqroot := 0
 	for i := 1; i <= nb; i++ {
-		if i*i == nb {
+		if i*i >= nb {
 			sqroot = i
+			return sqroot
 		}
 	}
 	return sqroot
