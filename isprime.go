@@ -18,7 +18,7 @@ func checkprimes(nb int, s []int) bool {
 
 func IsPrime(nb int) bool {
 	s := []int{2, 3, 5, 7, 11, 13, 17, 19, 23}
-	if nb > 200000 {
+	if nb > 200000 || nb <= 1 {
 		return false
 	} else if nb <= s[len(s)-1]*s[len(s)-1] {
 		return checkprimes(nb, s)
