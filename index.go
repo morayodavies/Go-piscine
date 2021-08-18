@@ -20,6 +20,8 @@ func Index(s string, toFind string) int {
 			for j := 0; j <= LengthIndex(toFind); j++ {
 				if word[j+i] == substring[j] {
 					c += 1
+				} else {
+					c = 0
 				}
 				if c == LengthIndex(toFind)+1 {
 					return i + j - LengthIndex(toFind)
