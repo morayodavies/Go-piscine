@@ -49,7 +49,7 @@ func TrimAtoi(s string) int {
 }
 
 func main() {
-	if os.Args[1] == "--upper" {
+	if os.Args[1] == "--upper" && len(os.Args) > 2 {
 		for _, letter := range os.Args[2:] {
 			if TrimAtoi(letter) >= 1 && TrimAtoi(letter) <= 26 {
 				z01.PrintRune(rune(TrimAtoi(letter) + 64))
@@ -58,7 +58,7 @@ func main() {
 			}
 		}
 		z01.PrintRune('\n')
-	} else {
+	} else if len(os.Args) > 1 {
 		for _, letter := range os.Args[1:] {
 			if TrimAtoi(letter) >= 1 && TrimAtoi(letter) <= 26 {
 				z01.PrintRune(rune(TrimAtoi(letter) + 96))
