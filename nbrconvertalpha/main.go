@@ -57,6 +57,7 @@ func main() {
 				z01.PrintRune(' ')
 			}
 		}
+		z01.PrintRune('\n')
 	} else {
 		for _, letter := range os.Args[1:] {
 			if TrimAtoi(letter) >= 1 && TrimAtoi(letter) <= 26 {
@@ -65,5 +66,6 @@ func main() {
 				z01.PrintRune(' ')
 			}
 		}
+		z01.PrintRune('\n')
 	}
 }
